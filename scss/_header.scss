@@ -1,0 +1,41 @@
+// header
+
+$site-header-color: black;
+$site-header-text-color: white;
+$site-header-links-color: white;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  background-color: $site-header-color;
+  color: $site-header-text-color;
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $site-header-links-color;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: bold;
+
+      @media only screen and (max-width: 640px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// footer
+
+$site-footer-color: #bbbbaa;
+$site-footer-text-color: black;
+
+.site-footer {
+  position: relative;
+  padding: 16px;
+  background-color: $site-footer-color;
+  color: $site-footer-text-color;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,98 @@
+// hero
+
+$home-hero-color: white;
+$home-hero-text-color-1: black;
+$home-hero-text-color-2: #666;
+$home-hero-btn-color: #444;
+$home-hero-btn-text-color: #ddd;
+$home-hero-btn-hover-color: white;
+$home-hero-btn-active-color: #666;
+
+.hero-home {
+  position: relative;
+  padding: 16px;
+  background-color: $home-hero-color;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 32px;
+
+  @media only screen and (max-width: 640px) {
+    flex-wrap: wrap;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .hero-left,
+  .hero-right {
+    position: relative;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: space-evenly;
+    align-items: start;
+
+    @media only screen and (max-width: 640px) {
+      align-items: center;
+    }
+
+    img {
+      max-width: 40vmax;
+      max-height: 40vmax;
+      object-fit: contain;
+
+      @media only screen and (max-width: 640px) {
+        max-width: 26vmax;
+        max-height: 26vmax;
+      }
+    }
+  }
+
+  .hero-left {
+    @media only screen and (max-width: 640px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .hero-text,
+  .hero-btn {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  .hero-text {
+    &.text-1 {
+      font-size: 5vmax;
+      color: $home-hero-text-color-1;
+    }
+    &.text-2 {
+      font-size: 2vmax;
+      color: $home-hero-text-color-2;
+    }
+  }
+
+  .hero-btn {
+    padding: 16px 32px;
+    border-radius: 8px;
+    background-color: $home-hero-btn-color;
+    color: $home-hero-btn-text-color;
+    font-size: 2vmax;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:active {
+      color: $home-hero-btn-hover-color;
+    }
+    &:active {
+      background-color: $home-hero-btn-active-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

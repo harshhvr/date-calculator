@@ -1,0 +1,46 @@
+// fonts
+
+@font-face {
+  font-family: "Source Sans 3", sans-serif;
+  src: url("../fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+p {
+  font-size: 16px;
+}
+
+.material-symbols-outlined{
+    overflow: hidden;
+}

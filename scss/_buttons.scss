@@ -1,0 +1,23 @@
+// buttons
+
+$button-color: black;
+$button-text-color: white;
+$button-hover-color: #333;
+$button-active-color: #666;
+
+button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: $button-color;
+  color: $button-text-color;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+  &:active {
+    background-color: $button-active-color;
+  }
+  &:focus {
+    outline: none;
+  }
+}

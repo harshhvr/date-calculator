@@ -1,0 +1,116 @@
+// forms
+
+$form-color: white;
+$form-shadow-color: black;
+$form-header-border-color: black;
+$input-focus-color: black;
+$input-color: black;
+$input-border-color: black;
+$input-mandatory-field-badge-color: red;
+$button-color: black;
+$button-text-color: white;
+$button-hover-color: #333;
+$button-active-color: #666;
+
+form {
+  position: relative;
+  border-radius: 8px;
+  background-color: $form-color;
+  box-shadow: 0px 0px 6px 0px rgba($color: $form-shadow-color, $alpha: 0.1);
+  display: inline-block;
+
+  @media only screen and (max-width: 640px) {
+    display: block;
+  }
+
+  label {
+    font-weight: bold;
+
+    &.form-field-mandatory-badge {
+      &::after {
+        content: " *";
+        color: $input-mandatory-field-badge-color;
+      }
+    }
+  }
+
+  input,
+  select {
+    padding: 12px 8px;
+    width: 100%;
+    border-start-start-radius: 4px;
+    border-start-end-radius: 4px;
+    border: none;
+    border-bottom: 1px solid $input-border-color;
+    background-color: rgba($color: $input-color, $alpha: 0.02);
+
+    &:focus {
+      border-bottom-width: 2px;
+      outline: none;
+      background-color: rgba($color: $input-focus-color, $alpha: 0.1);
+    }
+  }
+
+  button {
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: $button-color;
+    color: $button-text-color;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+    &:active {
+      background-color: $button-active-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input,
+  select,
+  button {
+    font-size: 16px;
+  }
+
+  .form-header,
+  .form-content {
+    position: relative;
+    padding: 16px;
+  }
+
+  .form-header {
+    border-bottom: 0.5px solid
+      rgba($color: $form-header-border-color, $alpha: 0.1);
+    border-style: 0.5px solid $form-header-border-color;
+  }
+
+  .form-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+
+    .form-inputs {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .form-field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+    }
+  }
+}

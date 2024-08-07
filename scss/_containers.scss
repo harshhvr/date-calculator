@@ -1,0 +1,83 @@
+// containers
+
+.content-container {
+  position: relative;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main {
+  position: relative;
+  padding: 16px;
+  min-height: 80vh;
+}
+
+section {
+  &.form-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 16px;
+  }
+}
+
+// Output Box Styling
+
+$output-color: white;
+$output-shadow-color: black;
+$output-header-border-color: black;
+$input-focus-color: black;
+$input-color: black;
+$input-border-color: black;
+$button-color: black;
+$button-text-color: white;
+$button-hover-color: #333;
+$button-active-color: #666;
+
+.output {
+  position: relative;
+  border-radius: 8px;
+  background-color: $output-color;
+  box-shadow: 0px 0px 6px 0px rgba($color: $output-shadow-color, $alpha: 0.1);
+  display: inline-block;
+
+  @media only screen and (max-width: 640px) {
+    display: block;
+  }
+
+  .output-header,
+  .output-content {
+    position: relative;
+    padding: 16px;
+  }
+
+  .output-header {
+    border-bottom: 0.5px solid
+      rgba($color: $output-header-border-color, $alpha: 0.1);
+    border-style: 0.5px solid $output-header-border-color;
+  }
+
+  .output-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+
+    .output-field {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .output-field-label {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .output-field-value {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weeks Difference Dates</title>
+    <base href="/" target="_self" />
+    <link
+      rel="shortcut icon"
+      href="../images/svg/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/functions.js"></script>
+
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="../index.html" class="logo">
+        <img src="../images/svg/logo.svg" alt="Brand Logo" />
+      </a>
+
+      <a href="./index.html" class="menu">
+        <span class="material-symbols-outlined">widgets</span>
+      </a>
+    </header>
+
+    <div class="content-container">
+      <main>
+        <section class="form-section">
+          <form autocomplete="off" method="post">
+            <div class="form-header">
+              <h3>Weeks Difference Dates</h3>
+              <p>Get date before/after the number of weeks.</p>
+            </div>
+
+            <div class="form-content">
+              <!-- Form Inputs -->
+              <div class="form-inputs">
+                <div class="form-field">
+                  <label for="inputDate" class="form-field-mandatory-badge"
+                    >Date</label
+                  >
+                  <input
+                    type="date"
+                    name="first-date"
+                    id="inputDate"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="timePeriod" class="form-field-mandatory-badge"
+                    >Time Period</label
+                  >
+                  <select name="event" id="timePeriod">
+                    <option value="after" selected>After</option>
+                    <option value="before">Before</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="weeks" class="form-field-mandatory-badge"
+                    >Weeks</label
+                  >
+                  <input
+                    type="number"
+                    name="weeks"
+                    id="weeks"
+                    min="0"
+                    value="0"
+                    pattern="/([0-9])+/g"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Form Actions -->
+              <div class="form-actions">
+                <button type="submit" id="submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="output">
+            <div class="output-header">
+              <h3>Output</h3>
+            </div>
+            <div class="output-content">
+              <div class="output-field">
+                <div class="output-field-label" id="resultDateLabel">Date</div>
+                <div class="output-field-value" id="resultDate">[date]</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      Copyright &copy; NewCodes 2024. All Rights Reserved.
+    </footer>
+
+    <script src="../js/index.js"></script>
+    <script>
+      const calc = new Calculator();
+      calc.calculate2({
+        inputs: {
+          inputDate: "#inputDate",
+          timePeriod: "#timePeriod",
+          weeks: "#weeks",
+        },
+        outputs: {
+          resultDateLabel: "#resultDateLabel",
+          resultDate: "#resultDate",
+        },
+        actions: { submit: "#submit", reset: "#reset" },
+      });
+    </script>
+  </body>
+</html>

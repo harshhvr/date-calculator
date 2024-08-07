@@ -1,0 +1,39 @@
+// menu
+
+$site-menu-color: #444;
+$site-menu-active-color: black;
+$site-menu-text-color: #bba;
+$site-menu-text-hover-color: white;
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow-y: auto;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 16px;
+
+    .card {
+      padding: 32px;
+      border-radius: 8px;
+      background-color: $site-menu-color;
+      color: $site-menu-text-color;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &:hover,
+      &:active {
+        color: $site-menu-text-hover-color;
+      }
+
+      &:active {
+        background-color: $site-menu-active-color;
+      }
+    }
+  }
+}
